@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const Menu: React.FC = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand navbar-dark bg-dark">
       <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
         <li className="nav-item">
           <Link className="nav-link" href="/">
@@ -20,6 +20,6 @@ export const Menu: React.FC = () => {
           </Link>
         </li>
       </ul>
-    </nav>
-  );
+    </nav>
+  );
 };
