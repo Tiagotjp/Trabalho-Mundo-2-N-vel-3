@@ -4,10 +4,10 @@ import { ControleLivros } from './controle/ControleLivros';
 import { useNavigate } from 'react-router-dom';
 import "../src/App.css"
 const controleLivro = new ControleLivros();
-  const controleEditora = new ControleEditora();
+const controleEditora = new ControleEditora();
 
 export default function LivroDados() {
-  
+
   const opcoes = controleEditora.getEditoras().map((editora) => ({
     value: editora.codEditora,
     text: editora.nome,
@@ -52,8 +52,7 @@ export default function LivroDados() {
             id="titulo"
             className="form-control"
             value={titulo}
-            onChange={(e) => setTitulo(e.target.value)}
-          />
+            onChange={(e) => setTitulo(e.target.value)} required/>
         </div>
         <div className="form-group">
           <label htmlFor="resumo">Resumo:</label>
@@ -61,8 +60,7 @@ export default function LivroDados() {
             id="resumo"
             className="form-control"
             value={resumo}
-            onChange={(e) => setResumo(e.target.value)}
-          ></textarea>
+            onChange={(e) => { setResumo(e.target.value) }} required></textarea>
         </div>
         <div className="form-group">
           <label htmlFor="autores">Autores:</label>
@@ -70,8 +68,7 @@ export default function LivroDados() {
             id="autores"
             className="form-control"
             value={autores}
-            onChange={(e) => setAutores(e.target.value)}
-          ></textarea>
+            onChange={(e) => setAutores(e.target.value)} required></textarea>
         </div>
         <div className="form-group">
           <label htmlFor="codEditora">Editora:</label>
@@ -92,6 +89,6 @@ export default function LivroDados() {
           Salvar Dados
         </button>
       </form>
-    </main>
-  );
+    </main>
+  );
 }
