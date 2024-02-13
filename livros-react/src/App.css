@@ -7,10 +7,13 @@ h2 {
 }
 
 form label {
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 5px;
 }
 
 form button {
-  margin-top: 25px;
+  margin-top: 20px;
 }
+
+button{
+  display: float;}
